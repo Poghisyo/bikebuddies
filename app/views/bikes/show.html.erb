@@ -1,41 +1,49 @@
-<style>
 
-div {
-  border: 1px solid #000000;
-}
-</style>
 
 
 <div class ="text-center"><h1>Show page</h1></div>
 
-<div class="wrapper">
+<div class="wrapper show_box">
   <div class="container text-center">
     <div class="row">
-
-      <div class="col-xs-12 col-md-8">
-        <div class="show_photo">
-
-          <%= cl_image_tag("ho2mdojh41ookcuezmbe",
-      width: 400, height: 300, crop: :fill) %>
-          <div class="seller_info">
-            <p> <%= @bike.seller.name %> </p>
-             <p> location  </p>
+      <!-- pic and seller info -->
+      <div class="col-xs-12 col-md-6">
+        <div class="bike_seller ">
+          <div class="image-frame">
+            <%= image_tag("tricycle.jpg",
+            width: 400, height: 200, crop: :fill, ) %>
+          </div>
+          <div class="seller-info">
+            <p> Owner: <%= @bike.seller.name %> </p>
+            <p> Location: Amsterdam<%= @bike.location %> </p>
           </div>
         </div>
       </div>
 
-      <div class="col-xs-12 col-md-4">
-        <div class="bike_info">
-          <p id="bike_header"><%= @bike.name %></p>
-          <p>location</p>
-          <p>condition</p>
-          <p>availability</p>
-          <p>description</p>
-          <p>price</p>
+      <!-- description -->
+
+      <div class="col-xs-12 col-md-3">
+        <div id="bike-description">
+
+          <h3>Description</h3>
         </div>
 
       </div>
-      <%= link_to "Book this bike", new_bike_rental_path(@bike), class: "btn btn-yellow btn-book" %>
+      <!-- bike info and booking -->
+      <div class="col-xs-12 col-md-3">
+        <div class="bike-info">
+          <p id="bike-header"><%= @bike.name %></p>
+          <p> location: <%=  @bike.location %> </p>
+          <p> condition: <%=  @bike.condition %> </p>
+          <p> availability: <%=  @bike.availability %>  </p>
+          <p> price: <%=  @bike.price %> </p>
+          <div class="btn-book">
+            <%= link_to "Book this bike", new_bike_rental_path(@bike), class: "btn btn-yellow" %>
+          </div>
+        </div>
+
+      </div>
+
 
 
     </div>
