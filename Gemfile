@@ -13,6 +13,7 @@ gem 'redis'
 gem 'devise'
 gem 'faker'
 
+gem 'omniauth-facebook'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
