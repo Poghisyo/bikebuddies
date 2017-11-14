@@ -1,0 +1,9 @@
+hi
+
+<%= current_user.email %>
+
+<h2>all your bikes:</h2>
+
+<% bikes = current_user.bikes %>
+
+<%= link_to "add a bike", new_account_bike_path, class: 'btn btn-primary' %>
