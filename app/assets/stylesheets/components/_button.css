@@ -1,0 +1,35 @@
+
+.btn-medium {
+  color: #eee;
+  border: 4px solid #d3ef05;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: 400;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+}
+.btn-treehouse {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #6AD58B;
+  transition: background 0.3s ease;
+}
+.btn-treehouse:hover {
+  opacity: 1;
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}
+
+.button-blink{
+  animation: blink .5s step-end infinite alternate;
+}
+
