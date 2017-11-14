@@ -7,6 +7,6 @@ class Account::BikesController < ApplicationController
 
   def new
     @bike = Bike.new
-    @bike.seller = current_user
+    @use_name = current_user.name ? current_user.name : current_user.email
   end
 end
