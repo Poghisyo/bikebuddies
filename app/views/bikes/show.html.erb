@@ -26,15 +26,16 @@ div {
 
       <div class="col-xs-12 col-md-4">
         <div class="bike_info">
-          <p><%= @bike.name %></p>
+          <p id="bike_header"><%= @bike.name %></p>
           <p>location</p>
           <p>condition</p>
           <p>availability</p>
           <p>description</p>
           <p>price</p>
-          <%= link_to "Book this bike", new_bike_rental_path(@bike), class: "btn btn-danger" %>
         </div>
+
       </div>
+      <%= link_to "Book this bike", new_bike_rental_path(@bike), class: "btn btn-yellow btn-book" %>
 
 
     </div>
