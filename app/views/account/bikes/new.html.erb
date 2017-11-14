@@ -7,7 +7,7 @@
       <h3>Add a bike listing</h3>
 
       <div class="form-fields">
-        <%= simple_form_for @bike do |f| %>
+        <%= simple_form_for [:account, @bike] do |f| %>
           <%= f.input :name, :label => 'Name of your bike' %>
           <%= f.input :price, :label => 'Price per day' %>
           <%= f.input :condition %>
