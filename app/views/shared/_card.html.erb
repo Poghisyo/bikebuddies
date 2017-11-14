@@ -1,0 +1,29 @@
+<div class="card-container">
+  <div class="card">
+    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= image_path('bycicle.jpg')%>');">
+      <span class="card-category">
+        <%= bike.location %>
+      </span>
+      <div class="card-description">
+        <h2>
+          <%= bike.name %>
+        </h2>
+          <p>
+            <%= bike.price %>
+          </p>
+       </div>
+       <img class="card-user avatar avatar-large" src=<%= image_path('geek.jpg')%>>
+       <a class="card-link" href="#" ></a>
+    </div>
+    <div class="card-footer">
+      <p>
+        Posted by <%= bike.seller.name %>
+      </p>
+      <div class="controls">
+        <a href="#"><i class="fa fa-star"></i></a></li>
+        <a href="#"><i class="fa fa-heart"></i></a></li>
+        <a href="#"><i class="fa fa-share"></i></a></li>
+      </div>
+    </div>
+  </div>
+</div>

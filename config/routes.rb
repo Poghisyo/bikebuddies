@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'bikes/index'
-
   root to: 'pages#home'
 
   devise_for :users
