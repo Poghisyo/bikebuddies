@@ -5,3 +5,42 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+puts 'cleaning database'
+Rental.destroy_all
+Bike.destroy_all
+User.destroy_all
+
+puts 'Creating 10 fake users...'
+10.times do
+  user = User.new({
+    name: Faker::FamilyGuy.character,
+    email: Faker::Internet.email,
+    password: Faker::Vehicle.vin
+    })
+  user.save!
+  bike = Bike.new({
+    name: Faker::Vehicle.manufacture
+    })
+  bike.seller = user
+  bike.save!
+end
+
+# puts 'Creating 50 fake bikes...'
+# 50.times do
+#   bike = Bike.new({
+#     name: Faker::Vehicle.manufacture,
+#     })
+#   bike.save!
+# end
+
+# puts 'Creating 20 fake rentals...'
+# 20.times do
+#   rental = Rental.new({
+#     name: Faker::Book.publisher
+#     })
+#   rental.save!
+# end
+
+puts 'Finished!'
