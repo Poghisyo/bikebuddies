@@ -33,3 +33,12 @@
   animation: blink .5s step-end infinite alternate;
 }
 
+.btn-yellow {
+  font-size: 15px;
+  background-color: rgb(243, 211, 77);
+  color: black;
+  border-radius: 30px;
+  padding: 5px 30px;
+}
+
+
