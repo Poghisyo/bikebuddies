@@ -3,8 +3,19 @@ class BikesController < ApplicationController
 
 
   def index
-    @bikes = Bike.all
+    @filters = params.permit(:location)
+
+    if @filters.present?
+      @bikes = Bike.where(@filters)
+    else
+      @bikes = Bike.all
+    end
   end
+
+  # def top
+  #   Nice to implement a top price or top quality filter
+  #   @bikes = Bike.where(price: XX)
+  # end
 
   def show
     @bike = Bike.find(params[:id])
