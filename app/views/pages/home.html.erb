@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div>
+  <%= render 'shared/banner' %>
+</div>
+
+<div class="cards-container">
+  <div class="row">
+    <% @three_bikes.each do |bike| %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <%= render partial: 'shared/card', locals: { bike: bike } %>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -2,11 +2,13 @@
 .banner {
   color: white;
   text-align: center;
-  height: 100vh;
+  height: calc(70vh - 70px);
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-position: bottom;
+
 }
 .banner h1 {
   font-size: 50px;
@@ -19,6 +21,7 @@
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 50px;
 }
-.banner .btn {
+/*.banner .btn {
   margin-top: 20px;
 }
+*/
