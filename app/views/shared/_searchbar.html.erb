@@ -5,9 +5,19 @@
     <button type="submit" class="btn btn-yellow">Search</button>
 </form> -->
 
-<form class=“navbar-form form-inline pull-right” action=<%= bikes_path %> method=“GET”>
+<!-- <form class=“navbar-form form-inline pull-right” action=<%= bikes_path %> method=“GET”>
    <input type=“text” name=“search[location]” placeholder=Where>
-   <input type=“date” name=“search[date]” placeholder=When>
+   <input type=“date” name=“search[date]” placeholder=When> -->
 <!--    <input type=“time” name=“search[time]” placeholder=What >
- -->   <button type="submit" class="btn btn-yellow">Search</button>
-</form>
+ -->   <!-- <button type="submit" class="btn btn-yellow">Search</button>
+</form> -->
+
+<!-- IMPLEMENT THE SEARCH BAR WHERE / WHEN / HOW MANY -->
+
+    <form class="navbar-form form-inline pull-right" action=<%= bikes_path %> method="GET">
+      <input type="text" name="location" placeholder="Where">
+      <input type="date" name="date" placeholder="when">
+      <!-- <input type="time" name="search[time]" placeholder="when"> -->
+      <button type="submit" class="btn btn-yellow">Search</button>
+    </form>
+

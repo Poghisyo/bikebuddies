@@ -23,7 +23,7 @@ puts 'Creating 10 fake users...'
   bike = Bike.new({
     name: Faker::Vehicle.manufacture,
     price: Faker::Number.decimal(2),
-    location: Faker::Vehicle.manufacture
+    location: ["Paris", "Amsterdam", "Berlin", "London", "Rome"].sample
     })
   bike.seller = user
   bike.save!
