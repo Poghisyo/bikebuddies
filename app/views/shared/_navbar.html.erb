@@ -6,12 +6,7 @@
 
 <!-- IMPLEMENT THE SEARCH BAR WHERE / WHEN / HOW MANY -->
   <% unless controller_name == "pages" && action_name == "home" %>
-    <form class="navbar-form form-inline pull-right" action=<%= bikes_path %> method="GET">
-      <input type="text" name="location" placeholder="Where">
-      <input type="date" name="date" placeholder="when">
-      <!-- <input type="time" name="search[time]" placeholder="when"> -->
-      <buttton type="submit" class="btn btn-yellow">Search</buttton>
-    </form>
+    <%= render 'shared/searchbar' %>
   <% end %>
 
 
