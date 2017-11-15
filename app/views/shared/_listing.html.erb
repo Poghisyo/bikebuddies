@@ -1,0 +1,46 @@
+<div class="listing-container">
+  <div class="row">
+    <div class="listing-body">
+        <div class="listing">
+
+          <div class="listing-name">
+            <% if bike.photo? %>
+            <%= cl_image_tag bike.photo.path, class: 'listing-image'%>
+            <% else %>
+            <%= image_tag "bycicle.jpg", class: 'listing-image'%>
+            <% end %>
+            <h3><strong><%= bike.name %></strong></h3>
+          </div>
+
+
+          <div class="listing-info">
+            <p>
+              <strong><%= bike.price %></strong> EUR/day
+            </p>
+            <p>
+              <%= bike.location %>
+            </p>
+          </div>
+
+          <div class="listing-description">
+            <%= bike.description %>
+
+          </div>
+
+
+          <div class="listing-status">
+            <% if bike.availability %>
+            <h4> 'Available for rent' </h4 class='accepted'>
+            <%= link_to 'disable listing', '#', class: 'btn btn-danger' %>
+            <% else %>
+            <h4 class='status declined'> Not listed </h4>
+
+            <%= link_to 'enable listing', '#', class: 'btn btn-success' %>
+            <% end %>
+          </div>
+
+              <%= link_to "", account_bike_path(bike), class: "listing-link"  %>
+        </div>
+    </div>
+  </div>
+</div>

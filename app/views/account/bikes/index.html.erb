@@ -1,22 +1,20 @@
-<h4>hi, <%= @use_name %></h4>
+insert user dashboard navbar here
 
 <div class="page-contents text-center">
-<h2>all your bikes:</h2>
-<p>TODO display this in list style with button to toggle availability parameter</p>
 
+<h2>All your bikes:</h2>
 
-
+<%= link_to "add a bike", new_account_bike_path, class: 'btn btn-primary' %>
 
 <div class=“cards-container”>
   <div class=“row”>
     <% @bikes.each do |bike| %>
-<!--       <div class=“col-xs-12 col-sm-6 col-md-4”>
-        <%= render partial: 'shared/card', locals: { bike: bike } %>
-      </div> -->
+      <div class='col-xs-12 col-sm-6'>
+        <%= render partial: 'shared/listing', locals: { bike: bike } %>
+      </div>
     <% end %>
   </div>
 </div>
 
 
-<%= link_to "add a bike", new_account_bike_path, class: 'btn btn-primary' %>
 </div>
