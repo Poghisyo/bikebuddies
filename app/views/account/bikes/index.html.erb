@@ -1,9 +1,22 @@
-hi
+<h4>hi, <%= @use_name %></h4>
 
-<%= current_user.email %>
-
+<div class="page-contents text-center">
 <h2>all your bikes:</h2>
+<p>TODO display this in list style with button to toggle availability parameter</p>
 
-<% bikes = current_user.bikes %>
+
+
+
+<div class=“cards-container”>
+  <div class=“row”>
+    <% @bikes.each do |bike| %>
+<!--       <div class=“col-xs-12 col-sm-6 col-md-4”>
+        <%= render partial: 'shared/card', locals: { bike: bike } %>
+      </div> -->
+    <% end %>
+  </div>
+</div>
+
 
 <%= link_to "add a bike", new_account_bike_path, class: 'btn btn-primary' %>
+</div>
