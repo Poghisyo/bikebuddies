@@ -1,0 +1,42 @@
+<div class="card-container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+  <div class="card col-xs-4" style='color: black'>
+    <% if bike.seller.photo? %>
+      <%= cl_image_tag bike.seller.photo.path%>
+    <% else %>
+      <%= image_tag "avatar.jpg", class: 'avatar-large'%>
+    <% end %>
+    <div class="listings-name">
+      <h3><%= @use_name %></h3>
+
+      <p>
+        <%= bike.location %>
+
+        </p>
+    </div>
+    <div class="listings-body">
+      <p><strong><%= bike.name %></strong></p>
+      <% if bike.photo? %>
+        <%= cl_image_tag bike.photo.path%>
+      <% else %>
+        <%= image_tag "bycicle.jpg", class: 'avatar-large'%>
+      <% end %>
+      <p>
+        <%= bike.price %>
+      </p>
+    </div>
+    <div class="listings-status">
+      <% if bike.availability %>
+      <%= 'Available for rent' %>
+      <%= link_to 'disable listing', '#', class: 'btn btn-danger' %>
+      <% else %>
+      <%= 'Not listed' %>
+      <%= link_to 'enable listing', '#', class: 'btn btn-success' %>
+
+      <% end %>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
