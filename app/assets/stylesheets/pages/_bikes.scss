@@ -1,5 +1,74 @@
+
+
+.show_box {
+  padding-top: 30px;
+}
+
+.bike_seller {
+ box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+
+// .img-circle {
+//  width: 110;
+//   height: 110;
+//   border-radius: 50%;
+//   margin-top: 20px;
+//   margin-bottom: 40px;
+// }
+.bike-image {
+  border-radius: 3px;
+}
+
+.image-frame {
+   // background-color: rgb(78, 77, 109);
+   height: 300px;
+
+   img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.seller-info {
+  text-align: left;
+  padding-left: 30px;
+  padding-top: 5px;
+  border: 1px solid #c3bdbd;
+  background-color: rgb(255,255,255);
+  border-radius: 3px;
+}
+
+#bike-description {
+  border: 1px solid black;
+  height: 381px;
+}
+
+#bike-header {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+}
+.bike-info {
+  border-radius: 3px;
+  border: 1px solid #c3bdbd;
+  background-color: rgb(255,255,255);
+  text-align: left;
+  padding-left: 10px;
+  height: 381px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
 .btn-book {
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bike-details {
+  padding: 20px 0px 0px 10px;
+  list-style: none;
 }
 
 
