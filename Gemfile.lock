@@ -248,6 +248,7 @@ DEPENDENCIES
   cloudinary
   devise
   faker
+  faraday (= 0.12.2)
   figaro
   font-awesome-sass
   jbuilder (~> 2.0)

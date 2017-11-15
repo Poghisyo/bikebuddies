@@ -12,6 +12,7 @@ gem 'rails', '5.0.6'
 gem 'redis'
 gem 'devise'
 gem 'faker'
+gem 'faraday', '0.12.2'
 
 gem 'omniauth-facebook'
 gem 'autoprefixer-rails'
