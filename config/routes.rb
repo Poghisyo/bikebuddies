@@ -11,9 +11,8 @@ Rails.application.routes.draw do
     # collection do
     #   get :top # => /bikes/top
     # end
-    member do
       resources :rentals, only: [:new, :create]
-    end
+
   end
 
   resources :rentals, only: [:index, :show]

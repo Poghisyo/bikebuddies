@@ -1,8 +1,10 @@
-<%= simple_form_for(new_account_bike_path) do |f| %>
+<%= simple_form_for [@bike, @rental] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :start_time %>
   <%= f.input :end_date %>
   <%= f.input :start_time %>
   <%= submit_tag 'Request this Booking', class: 'btn btn-yellow' %>
-  <!-- <%= f.submit%> -->
+  <%= f.submit%>
 <% end %>
+
+
