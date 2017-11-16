@@ -30,6 +30,10 @@ class BikesController < ApplicationController
 
     @alert_message = "You are viewing #{@bike.name}"
     @bike_coordinates = { lat: @bike.latitude, lng: @bike.longitude }
+
+    @rental = Rental.new
   end
+
+
 
 end
