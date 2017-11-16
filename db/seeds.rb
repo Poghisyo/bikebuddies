@@ -12,18 +12,46 @@ Rental.destroy_all
 Bike.destroy_all
 User.destroy_all
 
+
+cities_names = ["Berlin", "Rome", "London","Paris"]
+
+cities_locations = {
+  "Berlin" => [
+    "Genslerstraße 84, Berlin",
+    "Brandenburgische Straße 89, Berlin",
+    "Leopoldstraße 51, Berlin"
+  ],
+  "Rome" => [
+    "VIALE EUROPA 22, Rome",
+    "VIA APPIA NUOVA 123, Rome",
+    "Via Francesco Saverio Nitti, 28, Rome"
+  ],
+  "Paris" => [
+    "3 rue de la paix, Paris",
+    "31 rue de rivoli, Paris",
+    "8 rue du louvre, Paris"
+  ],
+  "London" => [
+    "10 downing street, London",
+    "15 approach road, London",
+    "18 oxford street, London"
+  ]
+}
+bike_location = cities_locations[cities_names.sample].sample
+
 puts 'Creating 10 fake users...'
-10.times do
+30.times do
   user = User.new({
     name: Faker::FamilyGuy.character,
     email: Faker::Internet.email,
     password: Faker::Vehicle.vin
     })
   user.save!
+
   bike = Bike.new({
     name: Faker::Vehicle.manufacture,
     price: Faker::Number.decimal(2),
-    location: ["Paris", "Amsterdam", "Berlin", "London", "Rome"].sample
+    location: bike_location
     })
   bike.seller = user
   bike.save!

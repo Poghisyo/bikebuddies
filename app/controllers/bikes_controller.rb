@@ -4,12 +4,20 @@ class BikesController < ApplicationController
 
   def index
     @filters = params.permit(:location)
-
     if @filters.present?
-      @bikes = Bike.where(@filters)
+      @bikes = Bike.where("location ILIKE ?", "%#{@filters['location'].capitalize}%")
     else
       @bikes = Bike.all
     end
+
+    # @bikes = Bike.where.not(latitude: nil, longitude: nil)
+
+    @hash = Gmaps4rails.build_markers(@bikes) do |bike, marker|
+      marker.lat bike.latitude
+      marker.lng bike.longitude
+    end
+      # marker.infowindow render_to_string(partial: "/bikes/map_box", locals: { bike: bike })
+
   end
 
   # def top
@@ -19,5 +27,9 @@ class BikesController < ApplicationController
 
   def show
     @bike = Bike.find(params[:id])
+
+    @alert_message = "You are viewing #{@bike.name}"
+    @bike_coordinates = { lat: @bike.latitude, lng: @bike.longitude }
   end
+
 end
