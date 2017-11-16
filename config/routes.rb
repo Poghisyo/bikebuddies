@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root to: 'pages#home'
 
   devise_for :users,
@@ -10,8 +11,9 @@ Rails.application.routes.draw do
     # collection do
     #   get :top # => /bikes/top
     # end
-
-    resources :rentals, only: [:new, :create]
+    member do
+      resources :rentals, only: [:new, :create]
+    end
   end
 
   resources :rentals, only: [:index, :show]

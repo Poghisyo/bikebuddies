@@ -1,0 +1,28 @@
+<div class="main-container">
+  <h1>New Rental Request</h1>
+
+<div class="content-container">
+  <div class="info-container col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class="bike-info">
+      <h3>Bike details</h3>
+      <%= @bike.name %>
+      <%= @bike.location %>
+      <%= @bike.price %>
+      <%= image_tag 'bycicle.jpg', width: 400, height: 300 %>
+    </div>
+
+    <div class="seller-info col-xs-12 col-sm-6 col-sm-offset-3"">
+      <h3>Provided by</h3>
+      <%= @bike.seller.first_name %>
+      <%= @bike.seller.address %>
+      <%= @bike.seller.photo %>
+    </div>
+  </div>
+
+
+  <div class="new-renatl-form">
+    <%= render 'shared/new_rental_form' %>
+  </div>
+</div>
+
+</div>
