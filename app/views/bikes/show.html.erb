@@ -12,7 +12,7 @@
 <div class="container">
   <div class="row">
     <!-- left side container -->
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-md-8">
       <div class="container-show-left margin-top">
         <!-- bike info and pic -->
         <div class="bike-details">
@@ -30,9 +30,9 @@
                 <i class="fa fa-star" aria-hidden="true"></i>
 
                 <li> <p><span> <i class="fa fa-euro gray" aria-hidden="true"></i>Price</span> <%=  @bike.price %></p></li>
-                <li> location: <%=  @bike.location %></li>
-                <li> condition: <%=  @bike.condition %></li>
-                <li> availability: <%=  @bike.availability %></li>
+                <li> <p><span>Location</span> <%=  @bike.location %></p></li>
+                <li> <p><span>Condition</span> <%=  @bike.condition %></p></li>
+                <li> <p><span>Availability</span> <%=  @bike.availability %></p></li>
               </ul>
 
             </div>
@@ -41,27 +41,39 @@
              width: 200, height: 180, crop: :fill,  class: "bike-image" ) %>
            </div>
          </div>
+         <!-- seller details -->
          <div class="seller-details margin-top">
           <h5>About Owner</h5>
-          <p> <%= @bike.description %></p>
+          <ul class="about-owner">
+            <li><p><span></span> <%=  @bike.seller.name %></p></li>
+            <p> <%= @bike.description %></p>
+          </ul>
+
+
+
           <div class="show-avatar">
-            <img class="card-user avatar avatar-large" src=<%= image_path('geek.jpg')%>>
+            <img class="card-user avatar avatar-large avatar-show" src=<%= image_path('geek.jpg')%>>
           </div>
         </div>
+        <div class="map-show">
+          <%= render partial: 'shared/map', locals: { hash: @hash } %>
 
+
+        </div>
       </div>
-      <!-- seller details -->
+
 
     </div>
 
 
 
     <!-- right side container -->
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-md-4">
       <div class="container-show-right margin-top">
         <!-- booking form -->
         <div class="booking-form">
-
+          <h5>Book a beautiful bike</h5>
+          <%= render 'shared/new_rental_form', locals: { bike: @bike} %>
          <!-- <div class="btn-book">
             <%#= link_to "Book this bike", new_bike_rental_path(@bike), class: "btn btn-yellow btn-book" %>
           </div> -->
@@ -69,10 +81,7 @@
 
         <!-- map -->
 
-        <div class="map-show">
 
-
-        </div>
       </div>
     </div>
 
@@ -95,60 +104,3 @@
 
 
 
-<!-- <div class ="text-center"><h1>Show page</h1></div>
--->
-<!-- <div class="wrapper show_box">
-  <div class="container text-center">
-
-    <div class="row"> -->
-
-      <!-- pic and seller info -->
-      <!-- <div class="col-xs-12 col-md-6 col-md-offset-1">
-        <div class="show-card text-left">
-          <div class="image-frame">
-            <%= image_tag("tricycle.jpg",
-            width: 400, height: 200, crop: :fill,  class: "bike-image" ) %>
-          </div>
-          <div class="show-footer">
-            <p> Owner: <%= @bike.seller.name %> </p>
-            <p> Location: Amsterdam<%= @bike.location %> </p>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- description -->
-
-     <!--  <div class="col-xs-12 col-md-3">
-        <div id="bike-description">
-          <h3>Description</h3>
-          <p class>Great child's bike for rent. My little girl loves it but is too big now.</p>
-        </div>
-      </div> -->
-
-      <!-- bike info and booking -->
-      <!-- <div class="col-xs-12 col-md-3 col-md-offset-1" >
-        <div class="bike-info">
-          <p id="bike-header"><%= @bike.name %></p>
-          <div class="bike-details">
-            <p> location: <%=  @bike.location %> </p>
-            <p> condition: <%=  @bike.condition %> </p>
-            <p> availability: <%=  @bike.availability %>  </p>
-            <p> price: <%=  @bike.price %> </p>
-          </div>
-          <div class="btn-book">
-            <%= link_to "Book this bike", new_bike_rental_path(@bike), class: "btn btn-yellow btn-book" %>
-          </div>
-        </div>
-      </div>
-
-<!-- JS content for  -->
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    const coord = <%= raw @bike_coordinates.to_json %>;
-    alert('Bike coordinates are ' + coord.lat + ', ' + coord.lng);
-  <% end %>
-<% end %>
-
-    </div>
-  </div>
-</div> -->
