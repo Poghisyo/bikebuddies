@@ -28,8 +28,14 @@ class BikesController < ApplicationController
   def show
     @bike = Bike.find(params[:id])
 
-    @alert_message = "You are viewing #{@bike.name}"
-    @bike_coordinates = { lat: @bike.latitude, lng: @bike.longitude }
+
+    # @alert_message = "You are viewing #{@bike.name}"
+    # @bike_coordinates = { lat: @bike.latitude, lng: @bike.longitude }
+
+      @hash = Gmaps4rails.build_markers(@bike) do |bike, marker|
+      marker.lat bike.latitude
+      marker.lng bike.longitude
+    end
   end
 
 end

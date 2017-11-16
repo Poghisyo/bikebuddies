@@ -79,9 +79,10 @@
   </div>
 </div>
 
+<div id="map"></div>
 
 
-
+<%= render partial: 'shared/map', locals: { hash: @hash } %>
 
 
 
@@ -141,13 +142,6 @@
         </div>
       </div>
 
-<!-- JS content for  -->
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    const coord = <%= raw @bike_coordinates.to_json %>;
-    alert('Bike coordinates are ' + coord.lat + ', ' + coord.lng);
-  <% end %>
-<% end %>
 
     </div>
   </div>
