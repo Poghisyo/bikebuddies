@@ -18,10 +18,12 @@
   color: white;
 }
 .banner p {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: lighter;
 
   margin-bottom: 50px;
+  color: white;
+  font-weight: lighter;
 
 }
 /*.banner .btn {

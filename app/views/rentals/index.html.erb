@@ -1,0 +1,10 @@
+<h1 style='text-align: center;'>All your rental requests</h1>
+
+
+
+<% @rentals.each do |rental| %>
+
+<%= render 'shared/rental_card', locals: {rental: rental} %>
+<%= rental.total_price %>
+<% end %>
+<%= params %>
