@@ -5,6 +5,9 @@
 
 <div class="cards-container">
   <div class="row">
+    <div id="card-title">
+    <p>Recommended Rides</p>
+    </div>
     <% @three_bikes.each do |bike| %>
     <div class="col-xs-12 col-sm-6 col-md-4">
       <%= render partial: 'shared/card', locals: { bike: bike } %>
