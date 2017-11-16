@@ -2,7 +2,7 @@
 
 /*div {
   border: .5px solid black;
-}*/
+  }*/
 
 </style>
 
@@ -22,10 +22,10 @@
             <ul class="bike-specs">
               <li>
                 <%# @bike.rating.times do  %>
-                  <i class="fa fa-star golden" aria-hidden="true"></i>
+                <i class="fa fa-star golden" aria-hidden="true"></i>
                 <%# end %>
                 <%# (5 - @bike.rating).times do %>
-                  <i class="fa fa-star gray" aria-hidden="true"></i>
+                <i class="fa fa-star gray" aria-hidden="true"></i>
                 <%# end %>
                 <i class="fa fa-star" aria-hidden="true"></i>
 
@@ -43,18 +43,21 @@
          </div>
          <div class="seller-details margin-top">
           <h5>About Owner</h5>
-            <p> <%= @bike.description %></p>
-         </div>
+          <p> <%= @bike.description %></p>
+          <div class="show-avatar">
+            <img class="card-user avatar avatar-large" src=<%= image_path('geek.jpg')%>>
+          </div>
+        </div>
 
-       </div>
-       <!-- seller details -->
+      </div>
+      <!-- seller details -->
 
-     </div>
+    </div>
 
 
 
-     <!-- right side container -->
-     <div class="col-xs-12 col-md-6">
+    <!-- right side container -->
+    <div class="col-xs-12 col-md-6">
       <div class="container-show-right margin-top">
         <!-- booking form -->
         <div class="booking-form">
