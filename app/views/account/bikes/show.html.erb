@@ -1,1 +1,46 @@
-hi bob
+
+<div class="profile-header-wrapper" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path('tricycle.jpg')%>');">
+  <div class="container profile-header-container text-center">
+    <div class="profile-header-infos">
+      <img src= <%= "geek.jpg" %> alt="">
+      <h1>RENTER NAME</h1>
+      <h2>RENTER DESCRIPTION</h2>
+    </div>
+
+    <div class="tabs">
+      <a class="tab active" href="#" data-target="profile">
+        <h3>My Profile</h3>
+        <p>Description reviews and wishlist</p>
+      </a>
+      <a class="tab" href="#" data-target="bikes">
+        <h3>My Bikes</h3>
+        <p>Access my fleet</p>
+      </a>
+      <a class="tab" href="#" data-target="messages">
+        <h3>My Messages</h3>
+        <p>Communication is key</p>
+      </a>
+    </div>
+
+  </div>
+</div>
+    <div class="tab-content" id="profile">
+      <h3 class="text-center">
+        profile
+      </h3>
+    </div>
+
+    <div class="tab-content hidden" id="bikes">
+      <h3 class="text-center">
+        bikes
+      </h3>
+    </div>
+
+    <div class="tab-content hidden" id="messages">
+      <h3 class="text-center">
+        messages
+      </h3>
+    </div>
+
+</body>
+</html>

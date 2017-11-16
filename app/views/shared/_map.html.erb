@@ -1,8 +1,8 @@
 <% content_for(:after_js) do %>
-  <%= javascript_tag do %>
+  <script>
     var handler = Gmaps.build('Google');
     handler.buildMap({ internal: { id: 'map' } }, function() {
-      markers = handler.addMarkers(<%= raw @hash.to_json %>);
+      markers = handler.addMarkers(<%= raw hash.to_json %>);
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
       if (markers.length == 0) {
@@ -11,7 +11,10 @@
         handler.getMap().setZoom(14);
       }
 
-    });
-  <% end %>
-<% end %>
+      else {
+            handler.getMap().setZoom(12);
+      }
 
+    });
+  </script>
+<% end %>

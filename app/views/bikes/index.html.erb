@@ -10,7 +10,7 @@
 </div> -->
 
 <!-- THIS IS THE MAIN CONTAINER (FOR CARDS & MAP) -->
-<div class="main-container">
+<div class="main-map-and-cards-container">
 
   <!-- THIS IS THE CARDS CONTAINER -->
   <div class="cards-container">
@@ -25,8 +25,8 @@
 
   <!-- THIS IS THE MAP -->
   <div id="map">
-  </div>
-  <%= render partial: 'shared/map', locals: { hash: hash } %>
+</div>
+ <%= render partial: 'shared/map', locals: { hash: @hash } %>
 
 </div>
 
