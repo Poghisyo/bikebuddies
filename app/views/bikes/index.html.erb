@@ -12,23 +12,29 @@
 <!-- THIS IS THE MAIN CONTAINER (FOR CARDS & MAP) -->
 <div class="main-container">
 
-    <!-- THIS IS THE CARDS CONTAINER -->
-    <div class="cards-container">
-      <div class="row">
-        <% @bikes.each do |bike| %>
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <%= render partial: 'shared/card', locals: { bike: bike } %>
-          </div>
-        <% end %>
+  <!-- THIS IS THE CARDS CONTAINER -->
+  <div class="cards-container">
+    <div class="row">
+      <% @bikes.each do |bike| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= render partial: 'shared/card', locals: { bike: bike } %>
       </div>
+      <% end %>
     </div>
+  </div>
+
   <!-- THIS IS THE MAP -->
-  <div id="map"></div>
+  <div id="map">
+  </div>
+  <%= render partial: 'shared/map', locals: { hash: hash } %>
+
 </div>
 
 
+
+
 <!-- Gmaps js: building the map -->
-<script>
+<!-- <script>
   function initMap() {
   // Create a map object and specify the DOM element for display.
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -40,12 +46,10 @@
       zoom: 8
     });
   }
-</script>
+</script> -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 <!-- Latest compiled and minified JavaScript -->
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 <!-- Gmaps JavaScript -->
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
-</script>
+
