@@ -16,7 +16,7 @@ class Account::BikesController < ApplicationController
     @bike.seller = current_user
     # binding.pry
     @bike.save!
-    redirect_to account_bike_path(@bike)
+    redirect_to account_bikes_path
   end
 
   def show
