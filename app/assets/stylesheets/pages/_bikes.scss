@@ -39,7 +39,8 @@
 .seller-details {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  height: 50px;
+  height: 100px;
+  position: relative;
 }
 
 .booking-form{
@@ -66,5 +67,9 @@
 
 .golden {
   color: #f3d34d;
+}
+
+.show{
+  position: relative;
 
 }
