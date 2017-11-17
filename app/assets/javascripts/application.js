@@ -9,7 +9,7 @@ var tabs = document.querySelectorAll('.tab')
 var tabContents = document.querySelectorAll('.tab-content')
 
 
-tabs.forEach((tab) => {
+tabs.forEach(function(tab) {
   tab.addEventListener('focus', function(event) {
     var target = event.currentTarget.dataset.target
     clearTabContents()
