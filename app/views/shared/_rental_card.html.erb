@@ -38,10 +38,9 @@
         <p>
           <%= rental.bike.seller.email %>
         </p>
-        <div class="static-map">
-          <% if rental.bike.seller.address %>
-          <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDs2Xq3ZQaLZ5S7wIAIZolZh0Y44Hd1s54&zoom=15&size=400x300&sensor=false&maptype=roadmap&markers=color:red|overhoeksplein" %>
-          <% end %>
+
+         <div class="map-show" id="map_dashboard">
+          <%= render partial: 'shared/map', locals: {hash: @hash} %>
         </div>
       </div>
 

@@ -12,7 +12,7 @@
       <ul>
         <% bike.rentals.each do |rental| %>
         <li>
-       <%= render 'shared/reservation_card', locals: { rental: rental }  %>
+       <%= render 'shared/reservation_card', locals: { reservation: @reservation }  %>
 
           <%= link_to "#{rental.start_date} until #{rental.end_date}", reservation_path(rental)  %>
           <%= rental.status %>
