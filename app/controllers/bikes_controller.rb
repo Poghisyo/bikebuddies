@@ -28,7 +28,7 @@ class BikesController < ApplicationController
   def show
     @bike = Bike.find(params[:id])
 
-
+    @rental = Rental.new
 
 
 
@@ -38,6 +38,7 @@ class BikesController < ApplicationController
     end
 
   end
+
 
 
 

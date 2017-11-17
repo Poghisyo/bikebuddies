@@ -9,6 +9,7 @@
 
 
 <!-- main div containing everything (product) -->
+<div class="wrapper-show">
 <div class="container">
   <div class="row">
     <!-- left side container -->
@@ -29,7 +30,7 @@
                 <%# end %>
                 <i class="fa fa-star" aria-hidden="true"></i>
 
-                <li> <p><span> <i class="fa fa-euro gray" aria-hidden="true"></i>Price</span> <%=  @bike.price %></p></li>
+                <li> <p><span> <i class="fa fa-euro gray" aria-hidden="true"></i>Price</span> <%=  @bike.price %> per day</p></li>
                 <li> <p><span>Location</span> <%=  @bike.location %></p></li>
                 <li> <p><span>Condition</span> <%=  @bike.condition %></p></li>
                 <li> <p><span>Availability</span> <%=  @bike.availability %></p></li>
@@ -55,8 +56,10 @@
             <img class="card-user avatar avatar-large avatar-show" src=<%= image_path('geek.jpg')%>>
           </div>
         </div>
-        <div class="map-show">
-          <%= render partial: 'shared/map', locals: { hash: @hash } %>
+        <div class="map-show" id="map">
+          <% hash = @hash %>
+
+          <%= render partial: 'shared/map', hash: hash %>
 
 
         </div>
@@ -73,10 +76,8 @@
         <!-- booking form -->
         <div class="booking-form">
           <h5>Book a beautiful bike</h5>
-          <%= render 'shared/new_rental_form', locals: { bike: @bike} %>
-         <!-- <div class="btn-book">
-            <%#= link_to "Book this bike", new_bike_rental_path(@bike), class: "btn btn-yellow btn-book" %>
-          </div> -->
+          <%= render 'shared/new_rental_form', locals: { bike: @bike}, class: "sticky" %>
+
         </div>
 
         <!-- map -->
@@ -87,11 +88,11 @@
 
   </div>
 </div>
+</div>
 
-<div id="map"></div>
 
 
-<%= render partial: 'shared/map', locals: { hash: @hash } %>
+
 
 
 
