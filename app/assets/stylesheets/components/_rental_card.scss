@@ -1,15 +1,26 @@
-.rental-container {
-  display: flex;
-
-}
-
 .rental-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border-top: 1px solid rgba(1, 1, 1 ,0.2);
+  border-bottom: 1px solid rgba(1, 1, 1 ,0.2);
+  // height: 500px;
 }
 
+.rental-info {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.rental-status {
+  text-align: center;
+}
+
+.rental-bike {
+  flex-grow: 1;
+}
 .rental-image {
   height: 150px;
-  margin-bottom: 10px;
+}
+
+.rental-booking-info {
+  margin-left: 60px;
+  flex-grow: 1;
 }

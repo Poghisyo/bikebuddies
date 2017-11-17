@@ -1,21 +1,50 @@
 
+<div class="rental-card " >
   <div class="row">
-    <div class="rental-card col-xs-12 col-sm-6" >
+    <div class="rental-status col-xs-12">
+      <h2>Status :<%= rental.status %></h2>
+    </div>
 
-      <div>
-        <%= image_tag 'bycicle.jpg' , class: 'rental-image'%>
+    <div class="rental-info col-xs-12">
+      <div class="rental-bike">
+        <div class="rental-bike-info">
+          <h3>Bike details:</h3>
+          <h4><%= rental.bike.name %></h4>
+          <p><%= rental.bike.price %> Eur/day</p>
+          <p><%= rental.bike.location %></p>
+        </div>
+
+        <div>
+          <%= image_tag 'bycicle.jpg' , class: 'rental-image'%>
+        </div>
       </div>
 
-      <div class="rental-info">
+      <div class="rental-booking-info">
+        <h3>Booking info:</h3>
+        <h4>pick up:</h4>
+        <p><%= rental.start_date %></p>
+        <p><%= rental.start_time %></p>
+        <h4>Drop off:</h4>
+        <p><%= rental.end_date %></p>
+        <p><%= rental.end_time %></p>
+        <h3>total price: <%= rental.total_price %></h3>
+      </div>
+
+      <div class="rental-seller-info">
+        <h3>Renter info:</h3>
+        <p>Posted by <%= rental.bike.seller.name %></p>
         <p>
-          Posted by <%= rental.bike.seller.email %>
+          <%= rental.bike.seller.email %>
         </p>
+        <div class="static-map">
+          <% if rental.bike.seller.address %>
+          <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyDs2Xq3ZQaLZ5S7wIAIZolZh0Y44Hd1s54&zoom=15&size=400x300&sensor=false&maptype=roadmap&markers=color:red|overhoeksplein" %>
+          <% end %>
+        </div>
       </div>
 
-      <div class="rental-status">
-        <p>Status</p>
-      </div>
     </div>
   </div>
+</div>
 
 
