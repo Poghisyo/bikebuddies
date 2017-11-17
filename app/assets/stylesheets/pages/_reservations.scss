@@ -1,1 +1,24 @@
-_reservations.scss
+.container-reservations {
+  padding-left: 20px;
+display: flex;
+    justify-content: center;
+}
+
+.reservation-listing {
+  padding: 20px;
+  width: 80%;
+  background-color: white;
+  ul {
+    list-style: none;
+    padding: 0;
+    li a {
+    text-decoration: none;
+
+    }
+  }
+}
+
+
+// .reservation-bike-info {
+//   padding: 10px;
+// }

@@ -1,2 +1,40 @@
-<h1>Reservations#show</h1>
-<p>Find me in app/views/reservations/show.html.erb</p>
+
+
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <!-- bike details -->
+       <div class="col-xs-12 col-md-6">
+        <div class="reservation-bike-info background-color box-shadow">
+          <h3>Bike details:</h3>
+          <h4><%= @reservation.bike.name %></h4>
+          <p><%= @reservation.bike.price %> Eur/day</p>
+          <p><%= @reservation.bike.location %></p>
+          <div>
+          <%= image_tag 'bycicle.jpg' , class: 'rental-image'%>
+        </div>
+        </div>
+
+    </div>
+
+
+<!-- booking info -->
+    <div class="col-xs-12 col-md-6">
+      <div class="rental-booking-info background-color box-shadow">
+        <h3>Booking info:</h3>
+        <h4>pick up:</h4>
+        <p><%= @reservation.start_date %></p>
+        <p><%= @reservation.start_time %></p>
+        <h4>Drop off:</h4>
+        <p><%= @reservation.end_date %></p>
+        <p><%= @reservation.end_time %></p>
+        <h3>total price: <%= @reservation.total_price %></h3>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
