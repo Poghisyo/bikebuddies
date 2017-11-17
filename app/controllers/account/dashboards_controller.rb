@@ -6,6 +6,7 @@ class Account::DashboardsController < ApplicationController
     @bikes = Bike.where(seller: current_user)
     @rentals = Rental.where(buyer_id: current_user)
     @use_name = current_user.name ? current_user.name : current_user.email
+    @reservations = Rental.where(seller_id: current_user)
   end
 
 end
