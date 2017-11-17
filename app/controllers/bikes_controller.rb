@@ -30,8 +30,6 @@ class BikesController < ApplicationController
 
     @rental = Rental.new
 
-
-
       @hash = Gmaps4rails.build_markers(@bike) do |bike, marker|
       marker.lat bike.latitude
       marker.lng bike.longitude

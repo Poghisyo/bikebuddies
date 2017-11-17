@@ -1,0 +1,25 @@
+
+<div class="page-contents text-center">
+
+  <h2>All your bikes:</h2>
+
+  <%= link_to "add a bike", new_account_bike_path, class: 'btn btn-primary' %>
+
+
+  <div class=“cards-container”>
+    <div class=“row”>
+      <div class="col-xs-12 col-lg-6">
+        <div class="row">
+          <% @bikes.each do |bike| %>
+            <div class='col-xs-12 col-sm-6'>
+              <%= render partial: 'shared/listing', locals: { bike: bike } %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <%= render partial: 'shared/new_bike' %>
+      </div>
+    </div>
+  </div>
+</div>
