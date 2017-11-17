@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   # As seller
   namespace :account do
     resources :bikes, only: [:index, :show, :new, :create, :edit, :update]
+    resources :dashboards, only: [:index]
   end
 
   resources :reservations, only: [:index, :show] do

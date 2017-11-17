@@ -49,9 +49,9 @@
           </div>
         </div>
         <div class="map-show" id="map">
-          <% hash = @hash %>
 
-          <%= render partial: 'shared/map', hash: hash %>
+
+          <%= render partial: 'shared/map', locals: {hash: @hash} %>
 
 
         </div>
