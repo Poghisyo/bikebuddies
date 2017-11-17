@@ -22,6 +22,7 @@ class RentalsController < ApplicationController
 
   def index
     @rentals = Rental.where(buyer_id: current_user)
+    redirect_to account_dashboards_path(active: "rentals")
   end
 
   private

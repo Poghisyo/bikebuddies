@@ -10,7 +10,7 @@ const tabContents = document.querySelectorAll('.tab-content')
 
 
 tabs.forEach((tab) => {
-  tab.addEventListener('click', (event) => {
+  tab.addEventListener('focus', (event) => {
     let target = event.currentTarget.dataset.target
     clearTabContents()
     document.getElementById(target).classList.remove('hidden')

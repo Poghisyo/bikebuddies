@@ -8,15 +8,15 @@
     </div>
 
     <div class="tabs">
-      <a class="tab active" href="#" data-target="bikes">
+      <a class="tab <%= 'active' if params["active"] == "bikes" || params["active"] == nil%>" href="#" data-target="bikes">
         <h3>My Bikes</h3>
         <p>Access my fleet</p>
       </a>
-      <a class="tab" href="#" data-target="reservations">
+      <a class="tab <%= 'active' if params["active"] == "reservations" %>" href="#" data-target="reservations">
         <h3>My Reservations</h3>
         <p>Half the wheels, twice the fun</p>
       </a>
-      <a class="tab" href="#" data-target="rentals">
+      <a class="tab <%= 'active' if params["active"] == "rentals" %>" href="#" data-target="rentals">
         <h3>My Rentals</h3>
         <p>Think globally, cycle locally</p>
       </a>
@@ -26,8 +26,7 @@
 </div>
     <div class="tab-content" id="bikes">
       <h3 class="text-center">
-        <%= render 'shared/account_bike_index', locals: { bikes: @bikes }  %>
-
+        <%= render 'shared/account_bike_index', locals: { bikes: @bikes } %>
       </h3>
     </div>
 
