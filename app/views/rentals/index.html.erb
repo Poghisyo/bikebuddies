@@ -1,10 +1,12 @@
 <h1 style='text-align: center;'>All your rental requests</h1>
 
+<div class="rental-container">
+  <div class="container">
+    <div class="row">
+      <% @rentals.each do |rental| %>
+      <%= render partial: 'shared/rental_card', locals: { rental: rental } %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-
-<% @rentals.each do |rental| %>
-
-<%= render 'shared/rental_card', locals: {rental: rental} %>
-<%= rental.total_price %>
-<% end %>
-<%= params %>
