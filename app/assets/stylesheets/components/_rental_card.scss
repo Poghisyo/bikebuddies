@@ -1,0 +1,15 @@
+.rental-container {
+  display: flex;
+
+}
+
+.rental-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rental-image {
+  height: 150px;
+  margin-bottom: 10px;
+}
