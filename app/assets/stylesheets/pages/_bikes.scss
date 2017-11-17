@@ -13,10 +13,12 @@
   li {
     font-size: 14px;
     color: #4e4d4d;
+        margin-bottom: 15px;
 
     span {
       font-weight: medium;
     }
+
   }
 }
 
@@ -28,6 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .image-bike-show {
@@ -37,39 +40,74 @@
 }
 
 .seller-details {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #b3b2b2;
+  border-bottom: 1px solid #b3b2b2;
   height: 100px;
   position: relative;
+
 }
 
-.booking-form{
-  background-color: red;
-  height: 100px;
+.about-owner{
+  padding: 0;
+  li {
+    font-size: 14px;
+    color: #4e4d4d;
+    list-style: none;
+
+    span {
+      font-weight: medium;
+    }
+  }
 }
-.map-show {
-  background-color: black;
-  height: 100px;
+
+
+
+
+
+.form-inline select,
+.form-group label {
+  font-size: 15px;
 }
+
 
 .container-show-right {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
     /* height: 401px; */
     justify-content: space-around;
+  }
+
+  .container-show-left {
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+
+  }
+
+  .golden {
+    color: #f3d34d;
+  }
+
+  .show{
+    position: relative;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+  }
+
+//   .container-show-right{
+// position: absolute;
+//   }
+
+  .sticky {
+        position: fixed;
+    top: 76px;
+    height: 465px;
 }
 
-.container-show-left {
-  background-color: #ffffff;
-  padding: 15px;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-}
 
-.golden {
-  color: #f3d34d;
-}
 
-.show{
-  position: relative;
 
-}

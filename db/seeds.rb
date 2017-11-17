@@ -12,34 +12,22 @@ Rental.destroy_all
 Bike.destroy_all
 User.destroy_all
 
-
-cities_names = ["Berlin", "Rome", "London","Paris"]
-
-cities_locations = {
-  "Berlin" => [
+bike_location = [
     "Genslerstraße 84, Berlin",
     "Brandenburgische Straße 89, Berlin",
-    "Leopoldstraße 51, Berlin"
-  ],
-  "Rome" => [
+    "Leopoldstraße 51, Berlin",
     "VIALE EUROPA 22, Rome",
     "VIA APPIA NUOVA 123, Rome",
-    "Via Francesco Saverio Nitti, 28, Rome"
-  ],
-  "Paris" => [
+    "Via Francesco Saverio Nitti, 28, Rome",
     "3 rue de la paix, Paris",
     "31 rue de rivoli, Paris",
-    "8 rue du louvre, Paris"
-  ],
-  "London" => [
+    "8 rue du louvre, Paris",
     "10 downing street, London",
     "15 approach road, London",
-    "18 oxford street, London"
+    "18 oxford street, London",
   ]
-}
-bike_location = cities_locations[cities_names.sample].sample
 
-puts 'Creating 10 fake users...'
+puts 'Creating 30 fake users...'
 30.times do
   user = User.new({
     name: Faker::FamilyGuy.character,
@@ -51,7 +39,7 @@ puts 'Creating 10 fake users...'
   bike = Bike.new({
     name: Faker::Vehicle.manufacture,
     price: Faker::Number.decimal(2),
-    location: bike_location
+    location: bike_location.sample
     })
   bike.seller = user
   bike.save!
@@ -72,5 +60,32 @@ end
 #     })
 #   rental.save!
 # end
+
+
+# cities_names = ["Berlin", "Rome", "London","Paris"]
+
+# cities_locations = {
+#   "Berlin" => [
+#     "Genslerstraße 84, Berlin",
+#     "Brandenburgische Straße 89, Berlin",
+#     "Leopoldstraße 51, Berlin"
+#   ],
+#   "Rome" => [
+#     "VIALE EUROPA 22, Rome",
+#     "VIA APPIA NUOVA 123, Rome",
+#     "Via Francesco Saverio Nitti, 28, Rome"
+#   ],
+#   "Paris" => [
+#     "3 rue de la paix, Paris",
+#     "31 rue de rivoli, Paris",
+#     "8 rue du louvre, Paris"
+#   ],
+#   "London" => [
+#     "10 downing street, London",
+#     "15 approach road, London",
+#     "18 oxford street, London"
+#   ]
+# }
+# bike_location = cities_locations[cities_names.sample].sample
 
 puts 'Finished!'
