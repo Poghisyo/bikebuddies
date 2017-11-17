@@ -1,4 +1,5 @@
-<h2>Hi, <%= @use_name %></h2>
+<div class="form-container col-xs-12 col-sm-6 col-sm-offset-3">
+
 <h3>Add a bike listing</h3>
 
 <div class="form-fields">
@@ -8,9 +9,11 @@
     <%= f.input :condition %>
     <%= f.input :location %>
     <%= f.input :description %>
-    <%= f.label :availability, 'Availability?' %>
+    <%= f.input :availability, label: 'List as available' %>
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit "post this bike", class: "btn btn-primary" %>
+    <%= f.submit "post this bike", class: "btn btn-yellow" %>
   <% end %>
+</div>
+
 </div>
