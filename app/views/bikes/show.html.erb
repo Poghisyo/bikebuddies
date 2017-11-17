@@ -22,16 +22,16 @@
                 <%# end %>
                 <i class="fa fa-star" aria-hidden="true"></i>
 
-                <li> <p><span> <i class="fa fa-euro gray" aria-hidden="true"></i>Price</span> <%=  @bike.price %> per day</p></li>
-                <li> <p><span>Location</span> <%=  @bike.location %></p></li>
-                <li> <p><span>Condition</span> <%=  @bike.condition %></p></li>
-                <li> <p><span>Availability</span> <%=  @bike.availability %></p></li>
+                <li> <p><span> <i class="fa fa-euro gray" aria-hidden="true"></i></span> <%=  @bike.price %> per day</p></li>
+                <li> <p><span><i class="fa fa-globe gray" aria-hidden="true"></i></span> <%=  @bike.location %></p></li>
+                <li> <p><span><i class="fa fa-check" aria-hidden="true"></i></span> <%=  @bike.condition %></p></li>
+                <li> <p><span><i class="fa fa-calendar" aria-hidden="true"></i></span> <%=  @bike.availability %></p></li>
               </ul>
 
             </div>
             <div class="image-bike-show-">
-             <%= image_tag("tricycle.jpg",
-             width: 200, height: 180, crop: :fill,  class: "bike-image" ) %>
+              <%= cl_image_tag @bike.photo, height: 300, width: 400, crop: :fill, class: "bike-image" %>
+
            </div>
          </div>
          <!-- seller details -->
