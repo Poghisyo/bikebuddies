@@ -1,7 +1,9 @@
 <div class="card-container">
   <div class="card">
-    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= image_path('bycicle.jpg')%>');">
+    <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('<%= bike_picture_url(bike) %>');">
+
       <span class="card-category">
+
         <%= bike.location %>
       </span>
       <div class="card-description">

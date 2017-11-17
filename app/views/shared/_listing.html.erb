@@ -5,7 +5,7 @@
 
           <div class="listing-name">
             <% if bike.photo? %>
-            <%= cl_image_tag bike.photo.path, class: 'listing-image'%>
+            <%= cl_image_tag bike.photo, class: 'listing-image'%>
             <% else %>
             <%= image_tag "bycicle.jpg", class: 'listing-image'%>
             <% end %>
