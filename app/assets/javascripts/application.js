@@ -5,13 +5,13 @@
 //= require gmaps/google
 //= require_tree .
 
-const tabs = document.querySelectorAll('.tab')
-const tabContents = document.querySelectorAll('.tab-content')
+var tabs = document.querySelectorAll('.tab')
+var tabContents = document.querySelectorAll('.tab-content')
 
 
 tabs.forEach((tab) => {
-  tab.addEventListener('focus', (event) => {
-    let target = event.currentTarget.dataset.target
+  tab.addEventListener('focus', function(event) {
+    var target = event.currentTarget.dataset.target
     clearTabContents()
     document.getElementById(target).classList.remove('hidden')
   clearTabs()
@@ -21,13 +21,13 @@ tabs.forEach((tab) => {
 
 
 function clearTabContents() {
-  tabContents.forEach((tabContent) => {
+  tabContents.forEach(function(tabContent) {
     tabContent.classList.add('hidden')
   })
 }
 
 function clearTabs() {
-  tabs.forEach((tab) => {
+  tabs.forEach(function(tab) {
     tab.classList.remove('active')
   })
 }
