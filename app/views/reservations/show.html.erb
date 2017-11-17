@@ -1,0 +1,46 @@
+
+
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <!-- bike details -->
+       <div class="col-xs-12 col-md-6">
+        <div class="reservation-bike-info background-color box-shadow">
+          <h5>Bike details:</h5>
+          <h5 id="bike-name-text"><%= @reservation.bike.name %></h5>
+          <p><%= @reservation.bike.price %> Eur/day</p>
+          <p><%= @reservation.bike.location %></p>
+          <div>
+          <%= image_tag 'bycicle.jpg' , class: 'rental-image'%>
+        </div>
+        </div>
+
+    </div>
+
+
+<!-- booking info -->
+    <div class="col-xs-12 col-md-6">
+      <div class="rental-booking-info background-color box-shadow">
+        <h5>Booking info:</h5>
+        <h5>pick up:</h5>
+        <p><%= @reservation.start_date %></p>
+        <p><%= @reservation.start_time %></p>
+        <h5>Drop off:</h5>
+        <p><%= @reservation.end_date %></p>
+        <p><%= @reservation.end_time %></p>
+        <h4>total price: <%= @reservation.total_price %></h4>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+<div class="accept-decline">
+ <button type="submit" class="btn btn-yellow">Accept</button>
+  <button type="submit" class="btn btn-purple">Decline</button>
+</div>
+
+
+

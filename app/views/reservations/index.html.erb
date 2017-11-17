@@ -1,0 +1,26 @@
+<div class="container-reservations margin-top ">
+<div class="reservation-listing box-shadow">
+    <h4 class="text-center">My Reservations</h4>
+
+  <ul>
+    <% @bikes.each do |bike| %>
+    <% if bike.rentals.any? %>
+    <li>
+      <h4>Bike:
+        <%= link_to bike.name, bike_path(bike) %>
+      </h4>
+      <ul>
+        <% bike.rentals.each do |rental| %>
+        <li>
+          <%= link_to "#{rental.start_date} until #{rental.end_date}", reservation_path(rental)  %>
+          <%= rental.status %>
+          by <%= rental.buyer.email %>
+        </li>
+        <% end %>
+      </ul>
+    </li>
+    <% end %>
+    <% end %>
+  </ul>
+  </div>
+</div>

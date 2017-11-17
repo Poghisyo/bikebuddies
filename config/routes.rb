@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  get 'reservations/index'
+
+  get 'reservations/show'
+
   root to: 'pages#home'
 
   devise_for :users,
