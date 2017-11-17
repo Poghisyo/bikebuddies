@@ -1,7 +1,7 @@
 .container-reservations {
   padding-left: 20px;
-display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .reservation-listing {
@@ -12,13 +12,38 @@ display: flex;
     list-style: none;
     padding: 0;
     li a {
-    text-decoration: none;
+      text-decoration: none;
 
     }
   }
 }
 
 
-// .reservation-bike-info {
-//   padding: 10px;
-// }
+.reservation-bike-info {
+  margin: 25px;
+  padding-left: 24px;
+
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.rental-booking-info {
+ margin: 25px;
+ padding-left: 24px;
+
+ padding-top: 10px;
+ padding-bottom: 20px;
+}
+
+#bike-name-text{
+  font-weight: bold;
+}
+
+.accept-decline {
+  display: flex;
+  justify-content: space-between;
+  max-width: 306px;
+  margin: 0px auto;
+}
+
+
